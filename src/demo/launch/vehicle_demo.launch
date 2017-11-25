@@ -1,0 +1,10 @@
+<launch>
+	
+  <include file="$(find ilqr_loco)/launch/bstraj_action_client.launch">
+  </include>
+
+    <include file="$(find loco)/launch/bsopenloop_fve.launch">
+  </include>
+
+  <node name="keyboard_command" pkg="keyboard_command" type="keyboard_command.py" output="screen"/>
+</launch>
